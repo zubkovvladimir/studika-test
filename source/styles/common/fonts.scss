@@ -1,0 +1,54 @@
+// Gotham Pro
+
+@include font-face("Gotham Pro", "./fonts/GothamPro/GothamPro", 400, "normal");
+@include font-face(
+  "Gotham Pro Light",
+  "./fonts/GothamPro/GothamPro-Light",
+  300,
+  "normal"
+);
+@include font-face(
+  "Gotham Pro Medium",
+  "./fonts/GothamPro/GothamPro-Medium",
+  500,
+  "normal"
+);
+@include font-face(
+  "Gotham Pro Black",
+  "./fonts/GothamPro/GothamPro-Black",
+  500,
+  "normal"
+);
+@include font-face(
+  "Gotham Pro Bold",
+  "./fonts/GothamPro/GothamPro-Bold",
+  500,
+  "normal"
+);
+@include font-face(
+  "Gotham Pro Narrow-Bold",
+  "./fonts/GothamPro/GothamProNarrow-Bold",
+  500,
+  "normal"
+);
+@include font-face(
+  "Gotham Pro Narrow-Medium",
+  "./fonts/GothamPro/GothamProNarrow-Medium",
+  500,
+  "normal"
+);
+
+// Futura New
+
+@include font-face(
+  "Futura New Light",
+  "./fonts/FuturaNew/FuturaNewLight-Reg",
+  500,
+  "normal"
+);
+@include font-face(
+  "Futura New Light Obl",
+  "./fonts/FuturaNew/FuturaNewLight-Obl",
+  500,
+  "normal"
+);

@@ -1,0 +1,44 @@
+.main-info
+  .custom-container
+    .main-info__inner.row.no-gutters
+
+      if isMainPage
+        a.main-info__logo.logo
+          img(
+            src="./images/logo.png",
+            alt="Riter Style",
+            width="170",
+            height="66"
+          ).logo--img
+      else
+        a(href="index.html", tabindex="9").main-info__logo.logo
+          img(
+            src="./images/logo.png",
+            alt="Riter Style",
+            width="100",
+            height="100"
+          ).logo--img
+
+      ul.main-info__list.col.row.no-gutters
+        li.main-info__item.col.col-xl-5
+          a(href="tel:7 495 290-34-84", tabindex="7").contacts-phone
+            p.contacts-phone__desc Ваш город:
+              span.contacts-phone__desc--city  ПЕРМЬ
+            b.contacts-phone__value +7 495 290-34-84
+        li.main-info__item.col
+          a(href="mailto:hello@riter.ru", tabindex="8").contacts-email
+            p.contacts-email__desc Напишите нам
+            b.contacts-email__value hello@riter.ru
+
+      .main-info__user.col.row.no-gutters
+        .main-info__user-wrap.col
+          a(href="#", tabindex="10").user-login
+            p.user-login__desc Личный кабинет
+            b.user-login__value--desktop Вход/регистрация
+            b.user-login__value Войти
+
+        .main-info__user-wrap.col-lg.col-xl-4
+          a(href="#", tabindex="11").user-cart
+            p.user-cart__desc Товаров на сумму
+            b.user-cart__value 320 000 Р
+            span.user-cart__count 2

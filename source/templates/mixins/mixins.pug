@@ -1,0 +1,17 @@
+mixin textInfoBlock(paragraph, span)
+  p.main-info__text-desc= paragraph
+    span.main-info__text-info= span
+
+mixin footerBlock(data)
+  h3.page-footer__title= data.title
+  ul.page-footer__list
+    each item in data.list
+      li.page-footer__item
+        a(href="content.html")= item
+
+mixin pagesListItem(value, url, tab, width="52", height="37", href= "catalog.html")
+  a(href= href, tabindex= tab)
+    img(src= url, alt= value, width= width, height= height)
+    p= value
+
+

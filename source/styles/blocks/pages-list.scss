@@ -1,0 +1,126 @@
+.pages-list {
+  display: none;
+}
+
+.pages-list__lvl2 {
+  display: none;
+}
+
+@media (min-width: $tab-width) {
+  .pages-list {
+    @include list-reset();
+
+    margin-bottom: 12px;
+    display: flex;
+  }
+
+  .pages-list__item {
+    @include items-states();
+    text-align: center;
+    word-break: break-all;
+
+    a {
+      @include font-style($black, 11px, 13px, 500, "Gotham Pro Medium", .1em);
+      @include link-to-block();
+
+      text-transform: uppercase;
+      padding-top: 22px;
+    }
+
+    &:first-child {
+      text-align: left;
+    }
+
+    &:nth-child(3),
+    &:last-child {
+      display: none;
+    }
+
+    &:nth-child(8) {
+      text-align: end;
+    }
+
+    &:nth-child(6) {
+      padding-top: 5px;
+    }
+
+    &:nth-child(8) {
+      text-align: end;
+    }
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .pages-list__item {
+    &:nth-child(1) {
+      text-align: center;
+    }
+
+    &:nth-child(2) {
+      text-align: left;
+
+      svg {
+        margin-left: 10px;
+      }
+    }
+
+    &:nth-child(3) {
+      display: block;
+    }
+
+    &:nth-child(8) {
+      text-align: center;
+    }
+
+    &:last-child {
+      display: block;
+
+      a {
+        padding-right: 12px;
+        padding-top: 73px;
+
+        text-align: end;
+      }
+    }
+
+    &:nth-child(9) {
+      &::before{
+        @include pseudo(50px, 50px);
+
+        background-image: url("img/round.svg"),
+          url("img/round.svg"),
+          url("img/round.svg"),
+          url("img/round.svg"),
+          url("img/round.svg"),
+          url("img/round.svg"),
+          url("img/round.svg"),
+          url("img/round.svg"),
+          url("img/round.svg");
+
+        background-position: 0 0,
+          14px 0,
+          27px 0,
+          0 14px,
+          14px 14px,
+          27px 14px,
+          0 27px,
+          14px 27px,
+          27px 27px;
+
+        top: 23px;
+        left: 52px;
+      }
+
+      &::after{
+        @include pseudo(0px, 0px);
+
+        border: 3px solid transparent;
+        border-top: 6px solid black;
+
+        top: 76px;
+        right: 0px;
+      }
+    }
+  }
+}

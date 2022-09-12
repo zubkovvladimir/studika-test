@@ -1,0 +1,38 @@
+.contacts-email {
+  @include link-to-block();
+  @include items-states();
+
+  padding-left: 32px;
+  padding-top: 15px;
+  padding-right: 10px;
+
+  &::before {
+    @include pseudo(24px, 19px);
+
+    background-image: url("img/email.svg");
+    top: 20px;
+    left: 0px;
+  }
+}
+
+.contacts-email__desc {
+  @include font-style($black-05, 10px, 10px, 500, "Gotham Pro Medium");
+  margin: 0;
+}
+
+.contacts-email__value {
+  @include font-style($black, 15px, 15px, 500, "Gotham Pro Medium");
+}
+
+@media (min-width: $desktop-width) {
+  .contacts-email {
+    padding-left: 50px;
+    padding-top: 41px;
+    padding-bottom: 25px;
+
+    &::before {
+      top: 46px;
+      left: 15px;
+    }
+  }
+}

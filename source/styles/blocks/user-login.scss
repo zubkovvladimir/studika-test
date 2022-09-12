@@ -1,0 +1,65 @@
+.user-login {
+  @include link-to-block();
+  @include items-states();
+
+  padding-top: 23px;
+  padding-bottom: 1px;
+  padding-right: 8px;
+}
+
+.user-login__desc {
+  @include font-style($black-05, 10px, 10px, 500, "Gotham Pro Medium");
+  margin: 0;
+}
+
+.user-login__value,
+.user-login__value--desktop {
+  @include font-style($black, 12px, 15px, 500, "Gotham Pro Medium");
+}
+
+.user-login__value--desktop {
+  display: none;
+}
+
+@media (min-width: $tab-width) {
+  .user-login__value,
+  .user-login__value--desktop {
+    font-size: 15px;
+  }
+
+  .user-login {
+    padding-right: 28px;
+    padding-top: 45px;
+
+    &::before {
+      @include pseudo(24px, 21px);
+      background-image: url("img/user.svg");
+      top: 45px;
+      right: 0px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-cart__count {
+    display: block;
+  }
+
+  .user-login__value {
+    display: none;
+  }
+
+  .user-login__value--desktop {
+    display: block;
+  }
+
+  .user-login {
+    padding-right: 43px;
+    padding-top: 44px;
+
+    &::before {
+      top: 43px;
+      right: 9px;
+    }
+  }
+}

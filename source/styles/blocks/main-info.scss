@@ -1,0 +1,38 @@
+.main-info {
+  border-bottom: 1px solid $cream;
+}
+
+.main-info__list {
+  @include list-reset();
+  display: none;
+}
+
+.main-info__user {
+  text-align: right;
+  display: flex;
+}
+
+.main-info__user-wrap {
+  width: auto;
+}
+
+.main-info__item {
+  word-break: break-all;
+}
+
+@media (min-width: $tab-width) {
+  .main-info__user,
+  .main-info__logo{
+    order: 1;
+  }
+
+  .main-info__list {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-info__list {
+    display: flex;
+  }
+}

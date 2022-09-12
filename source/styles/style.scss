@@ -1,0 +1,30 @@
+/* normalize.scss */
+@import "../../node_modules/normalize.scss/normalize.scss";
+
+/* Глобальные стили */
+@import "_constants.scss";
+@import "common/global.scss";
+@import "_mixins.scss";
+@import "common/fonts.scss";
+
+/* Библиотеки */
+@import "_libs.scss";
+
+/* ------Блоки------ */
+
+/* Общие */
+@import "blocks/custom-container.scss";
+
+/* Header */
+@import "blocks/main-nav.scss";
+@import "blocks/menu-list.scss";
+@import "blocks/site-list.scss";
+@import "blocks/main-info.scss";
+@import "blocks/user-cart.scss";
+@import "blocks/user-login.scss";
+@import "blocks/contacts-email.scss";
+@import "blocks/contacts-phone.scss";
+@import "blocks/logo.scss";
+@import "blocks/pages-list.scss";
+
+/* Footer */

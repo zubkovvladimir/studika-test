@@ -1,0 +1,63 @@
+@mixin font-style(
+  $color: $black,
+  $font-size: 10px,
+  $line-height: 10px,
+  $font-weight: 400,
+  $font-family: "Gotham Pro",
+  $letter-spacing: normal
+) {
+  color: $color;
+  font-family: $font-family, "Arial", sans-serif;
+  line-height: $line-height;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-name;
+    src: url($path + ".woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin link-to-block {
+  display: block;
+  height: 100%;
+}
+
+@mixin background-icon ($url, $position-x: 50%, $position-y: 50%) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: $position-x $position-y;
+}
+
+@mixin items-states ($active: .3, $hover: .6, $focus: .6) {
+  &:hover {
+    opacity: $hover;
+  }
+
+  &:focus {
+    opacity: $focus;
+  }
+
+  &:active {
+    opacity: $active;
+  }
+}
+
+@mixin pseudo($width, $height, $content: "", $repeat: no-repeat) {
+  content: $content;
+  position: absolute;
+  background-repeat: $repeat;
+  width: $width;
+  height: $height;
+}

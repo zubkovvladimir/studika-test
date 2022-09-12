@@ -1,0 +1,79 @@
+.main-nav {
+  @include font-style($white, 10px, 11px, 300, "Gothqm Pro", .1em);
+
+  background-color: $black;
+  text-transform: uppercase;
+}
+
+.main-nav__wrap {
+  position: relative;
+  justify-content: space-between;
+}
+
+.main-nav__toggle {
+  @include font-style($white, 10px, 11px, 300, "Gothqm Pro", .1em);
+
+  background-color: transparent;
+  text-transform: uppercase;
+  border: none;
+  position: absolute;
+  font-size: 0;
+  height: 50px;
+
+  top: 0;
+  right: -3px;
+
+  padding-top: 6px;
+  padding-right: 42px;
+
+  &::before {
+    @include pseudo(28px, 2px);
+
+    right: 0;
+    top: 15px;
+    background-color: $white;
+  }
+
+  &::after {
+    @include pseudo(28px, 2px);
+
+    right: 0;
+    top: 25px;
+    background-color: $white;
+  }
+}
+
+.main-nav__list {
+  @include list-reset();
+}
+
+.main-nav__item {
+  font-size: 0;
+}
+
+@media (min-width: $tab-width) {
+  .main-nav__item {
+    font-size: 0;
+    height: 0;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__toggle {
+    @include items-states();
+
+    display: block;
+    position: relative;
+    font-size: 10px;
+    height: auto;
+    padding-top: 3px;
+
+    top: 0;
+    right: 0;
+  }
+}
+

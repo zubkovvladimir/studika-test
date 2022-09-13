@@ -17,7 +17,7 @@ const path = {
     images: 'source/images/**/*.{png,jpg,svg}',
     img: 'source/img/**/*.{png,jpg,svg}',
     fonts: 'source/fonts/**/*.woff',
-    icons: 'source/img/**/icon-*.svg',
+    icons: 'source/images/**/icon-*.svg',
     data: 'data/data.json',
   },
   watch: {
@@ -46,10 +46,6 @@ import sourcemap from 'gulp-sourcemaps';
 import pug from 'gulp-pug';
 import util from 'gulp-util';
 import gulpIf from 'gulp-if';
-import babel from 'gulp-babel';
-import concat from 'gulp-concat';
-import uglify from 'gulp-uglify';
-import rigger from 'gulp-rigger';
 import browsersync from 'browser-sync';
 import data from 'gulp-data';
 import fs from 'fs';
@@ -65,7 +61,6 @@ task('browserSync', () => {
   return server.init({
     server: 'build/',
     notify: false,
-    open: false,
     cors: true,
     ui: false,
     port: 1378,
@@ -108,7 +103,7 @@ task('sprite', () => {
       }),
     )
     .pipe(rename('sprite.svg'))
-    .pipe(dest('source/img/'));
+    .pipe(dest('source/images/icons'));
 });
 
 task('html', () => {

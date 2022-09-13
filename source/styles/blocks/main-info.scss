@@ -1,5 +1,5 @@
 .main-info {
-  border-bottom: 1px solid $cream;
+  border-bottom: 1px solid $black;
 }
 
 .main-info__list {
@@ -22,7 +22,7 @@
 
 @media (min-width: $tab-width) {
   .main-info__user,
-  .main-info__logo{
+  .main-info__logo {
     order: 1;
   }
 

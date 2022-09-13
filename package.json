@@ -49,14 +49,14 @@
     "stylelint-config-standard": "21.0.0"
   },
   "scripts": {
-    "editorconfig": "editorconfig-cli",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
+    "start": "gulp start",
     "prod": "gulp build --production",
     "dev": "gulp build",
     "eslint": "eslint source/js/**/*.js",
     "stylelint": "stylelint \"source/styles/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
-    "start": "gulp start",
     "images": "gulp images",
+    "editorconfig": "editorconfig-cli",
     "prettier": "prettier --write \"source/(scss|js)/**/*.(scss|css|js|json)\""
   },
   "editorconfig-cli": [

@@ -1,17 +1,13 @@
-mixin textInfoBlock(paragraph, span)
-  p.main-info__text-desc= paragraph
-    span.main-info__text-info= span
+mixin button(type='button', text)
+  button.button(type= type)= text
+    block
 
-mixin footerBlock(data)
-  h3.page-footer__title= data.title
-  ul.page-footer__list
-    each item in data.list
-      li.page-footer__item
-        a(href="content.html")= item
+mixin inputSearch
+  input.input-search(type="text", name="search", placeholder='Учебное заведение, специальность или профессия')
+  +svg(15, 15, 'search')
 
-mixin pagesListItem(value, url, tab, width="52", height="37", href= "catalog.html")
-  a(href= href, tabindex= tab)
-    img(src= url, alt= value, width= width, height= height)
-    p= value
+mixin svg(width, height, name, className)
+  svg(width=width height=height class=className)
+    use(xlink:href="#icon-" + name)
 
 
